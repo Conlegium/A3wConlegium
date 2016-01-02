@@ -974,6 +974,64 @@ customPlayerItems = compileFinal str
 	["Fire Extinguisher", "extinguisher", "You can extinguish burning vehicles including salvage!", "client\icons\fireextinguisher.paa", 1500, 500]
 ];
 
+//Conlegium Animals
+ConlegiumFishItems = compileFinal str
+[
+	["Fish (Salema)", "salema", "A Salema can ease 25 of your Hunger.", "client\icons\animals\animal_salema.paa", 16, 8],
+	["Fish (Ornate)", "ornate", "A Ornate can ease 20 of your Hunger.", "client\icons\animals\animal_ornate.paa", 12, 6],
+	["Fish (Mackerel)", "mackerel", "A Mackerel can ease 40 of your Hunger.", "client\icons\animals\animal_ornate.paa", 20, 10],
+	["Fish (Tuna)", "tuna", "A Tuna can ease 70 of your Hunger.", "client\icons\animals\animal_tuna.paa", 40, 20],
+	["Fish (Mullet)", "mullet", "A Mullet can ease 45 of your Hunger.", "client\icons\animals\animal_mullet.paa", 24, 12],
+	["Fish (Catshark)", "catshark", "A Catshark can ease 50 of your Hunger.", "client\icons\animals\animal_catshark.paa", 30, 15]
+];
+
+ConlegiumRabbitItems = compileFinal str
+[
+	["Rabbit", "rabbit", "A Rabbit can ease 25 of your Hunger.", "client\icons\animals\animal_rabbit.paa", 16, 8]
+];
+
+ConlegiumSnakeItems = compileFinal str
+[
+	["Snake", "snake", "A Snake can ease 10 of your Hunger.", "client\icons\animals\animal_snake.paa", 16, 8]
+];
+
+ConlegiumTurtleItems = compileFinal str
+[
+	["Turtle", "turtle", "A Turtle can ease 25 of your Hunger.", "client\icons\animals\animal_turtle.paa", 16, 8]
+];
+
+ConlegiumFowlItems = compileFinal str
+[
+	["Chicken (Hen)", "chickenhen", "A Chicken (Hen) can ease 55 of your Hunger.", "client\icons\animals\animal_hen.paa", 16, 8],
+	["Chicken (Cock)", "chickencock", "A Chicken (Cock) can ease 60 of your Hunger.", "client\icons\animals\animal_cock.paa", 16, 8]
+];
+
+ConlegiumDogItems = compileFinal str
+[
+	["Dog (Sand)", "dogsand", "A Dog (Sand) can ease 25 of your Hunger.", "client\icons\animals\animal_dogsand.paa", 16, 8],
+	["Dog (Blackwhite)", "dogblackwhite", "A Dog (Blackwhite) can ease 25 of your Hunger.", "client\icons\animals\animal_dogblackwhite.paa", 16, 8],
+	["Dog (Ocherwhite)", "dogocherwhite", "A Dog (Ocherwhite) can ease 25 of your Hunger.", "client\icons\animals\animal_dogocherwhite.paa", 16, 8],
+	["Dog (Tricolour)", "dogtricolour", "A Dog (Tricolour) can ease 25 of your Hunger.", "client\icons\animals\animal_dogtricolour.paa", 16, 8],
+	["Dog (Random)", "dograndom", "A Dog (Random) can ease 25 of your Hunger.", "client\icons\animals\animal_dogsand.paa", 16, 8],
+	["Alsatian (Black)", "alsatianblack", "A Alsatian (Black) can ease 25 of your Hunger.", "client\icons\animals\animal_alsatianblack.paa", 16, 8],
+	["Alsatian (Random)", "alsatianrandom", "A Alsatian (Random) can ease 25 of your Hunger.", "client\icons\animals\animal_alsatianblack.paa", 16, 8],
+	["Alsatian (Sand)", "alsatiansand", "A Alsatian (Sand) can ease 25 of your Hunger.", "client\icons\animals\animal_alsatiansand.paa", 16, 8],
+	["Alsatian (Sandblack)", "alsatiansandblack", "A Alsatian (Sandblack) can ease 25 of your Hunger.", "client\icons\animals\animal_alsatiansandblack.paa", 16, 8]
+];
+
+ConlegiumGoatItems = compileFinal str
+[
+	["Goat", "goat", "A Goat can ease 75 of your Hunger.", "client\icons\animals\animal_goat.paa", 16, 8]
+];
+
+ConlegiumSheepItems = compileFinal str
+[
+	["Sheep", "sheep", "A Sheep can ease 80 of your Hunger.", "client\icons\animals\animal_sheep.paa", 16, 8]
+];
+
+allAnimalItems = compileFinal str (call ConlegiumFishItems + call ConlegiumRabbitItems + call ConlegiumSnakeItems + call ConlegiumTurtleItems + call ConlegiumFowlItems + call ConlegiumDogItems + call ConlegiumGoatItems + call ConlegiumSheepItems);
+allPlayerInventoryItems = compileFinal str (call customPlayerItems + call allAnimalItems);
+
 call compile preprocessFileLineNumbers "mapConfig\storeOwners.sqf";
 
 storeConfigDone = compileFinal "true";

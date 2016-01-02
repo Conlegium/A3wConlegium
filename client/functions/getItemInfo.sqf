@@ -230,7 +230,7 @@ if (isNil "_itemEntry") then
 			_description = _x select 2;
 			_price = _x select 4;
 		};
-	} forEach (call customPlayerItems);
+	} forEach (call allPlayerInventoryItems);
 };
 
 if (_description == "" && {!isNil "_weapon"} && {isClass _weapon}) then

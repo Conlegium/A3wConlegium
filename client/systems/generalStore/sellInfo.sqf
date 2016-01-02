@@ -32,4 +32,4 @@ _itemData = _itemlist lbData _itemIndex;
 		_price = _x select 5;
 		_itemlisttext ctrlSetText format ["Value: $%1", [_price] call fn_numbersText];
 	}
-} forEach (call customPlayerItems);
+} forEach (call allPlayerInventoryItems);

@@ -36,7 +36,7 @@ storeSellingHandle = [] spawn
 		{
 			_price = _x select 5;
 		};
-	} forEach (call customPlayerItems);
+	} forEach (call allPlayerInventoryItems);
 
 	if (!isNil "_price") then
 	{

@@ -22,6 +22,7 @@
 	["<img image='client\icons\fireextinguisher.paa'/> <t color='#FF0D00'>Extinguish</t>", "addons\Conlegium\firefight.sqf", [], 41, false, false, "", "!isNull cursorTarget && !alive cursorTarget && {cursorTarget isKindOf 'AllVehicles' && !(cursorTarget isKindOf 'Man') && !(MF_ITEMS_FIRE_EXTINGUISHER call mf_inventory_count <= 0)}"],
 	["<t color='#B80000'>Register Ownership</t>", "addons\Conlegium\changeowner.sqf", [], 51, false, false, "", "(['LICENSE_OFFICE_WEST', getpos player] call BIS_fnc_inTrigger || ['LICENSE_OFFICE_NORTHEAST', getpos player] call BIS_fnc_inTrigger || ['LICENSE_OFFICE_SOUTHEAST', getpos player] call BIS_fnc_inTrigger) && !(vehicle player == player) && ((vehicle player) isKindOf 'Air' ||( vehicle player) isKindOf 'LandVehicle' || (vehicle player) isKindOf 'Ship')"],
 	["<t color='#B80000'>Chop Vehicle</t>", "addons\Conlegium\chopshop.sqf", [], 51, false, false, "", "(['CHOPSHOP_MARKER', getpos player] call BIS_fnc_inTrigger) && !(vehicle player == player) && ((vehicle player) isKindOf 'Air' ||( vehicle player) isKindOf 'LandVehicle' || (vehicle player) isKindOf 'Ship')"],
+	["<t color='#FF8000'>Catch Animal</t>", "client\functions\checkAnimal.sqf", [], 61,false,false,"","count nearestObjects[getPos player,['Animal_Base_F'],3] > 0"],
 	
 	["[0]"] call getPushPlaneAction,
 	["Push vehicle", "server\functions\pushVehicle.sqf", [2.5, true], 1, false, false, "", "[2.5] call canPushVehicleOnFoot"],
