@@ -93,6 +93,9 @@
 		<Key ID="STR_WL_ShopDescriptions_Campfire">
 			<English>A campfire brings familiar atmosphere to a nightly barbecue.</English>
 		</Key>
+		<Key ID="STR_WL_ShopDescriptions_Bankbook">
+			<English>The bankbook is able to connect to your ATM account.</English>
+		</Key>
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">

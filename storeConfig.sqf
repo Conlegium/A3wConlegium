@@ -969,7 +969,8 @@ customPlayerItems = compileFinal str
 	["Syphon Hose", "syphonhose", localize "STR_WL_ShopDescriptions_SyphonHose", "client\icons\syphonhose.paa", 200, 100],
 	["Energy Drink", "energydrink", localize "STR_WL_ShopDescriptions_Energy_Drink", "client\icons\energydrink.paa", 100, 50],
 	["Warchest", "warchest", localize "STR_WL_ShopDescriptions_Warchest", "client\icons\warchest.paa", 1000, 500],
-	["Campfire", "campfire", localize "STR_WL_ShopDescriptions_Campfire", "client\icons\campfire.paa", 0, 0]
+	["Campfire", "campfire", localize "STR_WL_ShopDescriptions_Campfire", "client\icons\campfire.paa", 0, 0],
+	["Bankbook", "bankbook", localize "STR_WL_ShopDescriptions_Bankbook", "client\icons\bankbook.paa", 1000, 0]
 ];
 
 call compile preprocessFileLineNumbers "mapConfig\storeOwners.sqf";
