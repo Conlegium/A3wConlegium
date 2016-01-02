@@ -8,6 +8,8 @@
 
 client_firstSpawn = true;
 
+[] execVM "addons\Conlegium\gameGift.sqf";
+
 [] execVM "client\functions\welcomeMessage.sqf";
 
 player addEventHandler ["Take",
