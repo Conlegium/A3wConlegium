@@ -17,6 +17,7 @@
 [_this, "cratemoney"] call mf_init;
 [_this, "campfire"] call mf_init;
 [_this, "bankbook"] call mf_init;
+[_this, "extinguisher"] call mf_init;
 
 if (["A3W_atmEnabled"] call isConfigOn) then
 {

@@ -127,6 +127,11 @@ vehicleEngineEvent = [_serverFunc, "vehicleEngineEvent.sqf"] call mf_compile;
 vehicleHandleDamage = [_serverFunc, "vehicleHandleDamage.sqf"] call mf_compile;
 vehicleHitTracking = [_serverFunc, "vehicleHitTracking.sqf"] call mf_compile;
 
+// Conlegium Additions
+//********************************************************************************************************
+fn_extinguish = [_serverFunc, "fn_extinguish.sqf"] call mf_compile;
+//********************************************************************************************************
+
 call compile preprocessFileLineNumbers "server\functions\mf_remote.sqf";
 
 "pvar_switchMoveGlobal" addPublicVariableEventHandler { ((_this select 1) select 0) switchMove ((_this select 1) select 1) };
