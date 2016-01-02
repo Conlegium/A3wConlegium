@@ -12,6 +12,7 @@ _flying = if (count _this > 1) then { _this select 1 } else { false };
 _class = typeOf _veh;
 _purchasedVehicle = _veh getVariable ["A3W_purchasedVehicle", false];
 _missionVehicle = (_veh getVariable ["A3W_missionVehicle", false] && !(_veh getVariable ["R3F_LOG_disabled", false]));
+_secureStatus = _veh getVariable ["VehSecured", false];
 
 _pos = ASLtoATL getPosWorld _veh;
 { _pos set [_forEachIndex, _x call fn_numToStr] } forEach _pos;
@@ -39,6 +40,8 @@ switch (true) do
 		_variables pushBack ["A3W_missionVehicle", true];
 	};
 };
+
+_variables pushBack ["VehSecured", _secureStatus];
 
 _owner = _veh getVariable ["ownerUID", ""];
 

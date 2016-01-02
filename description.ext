@@ -97,3 +97,20 @@ class CfgRemoteExec // applies only to clients
 		mode = 1;
 	};
 };
+
+class CfgSounds
+{
+	sounds[] =
+	{
+	carsecuresound
+	};
+	
+	class carsecuresound
+	{
+		name = "carsecuresound";
+		sound[] = {client\sounds\carsecuresound.ogg,0.5,1};
+		titles[] = {};
+	};
+	
+	
+};

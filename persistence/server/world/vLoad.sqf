@@ -120,12 +120,30 @@ _exclVehicleIDs = [];
 
 			_veh setVariable ["A3W_objectTextures", _objTextures, true];
 		};
-
+		
 		if (!isNil "_owner") then
 		{
 			_veh setVariable ["ownerUID", _owner, true];
 		};
-
+		
+		{ 
+			_veh setVariable [_x select 0, _x select 1, true];
+			diag_log format ["set variable %1 to %2 for vehicle type %3 at %4", _x select 0,_x select 1,_class,_pos];
+			if (_x select 0 isEqualTo "VehSecured") then 
+			{
+				if (_x select 1) then {
+					_veh setVariable ["R3F_LOG_disabled",true,true];
+					_veh lock true;
+					_veh allowDamage false;
+					
+				} else {
+					_veh setVariable ["R3F_LOG_disabled",false,true];
+					_veh lock false;
+					_veh allowDamage true
+				};
+			};
+		} forEach _variables;
+		
 		{ _veh setVariable [_x select 0, _x select 1, true] } forEach _variables;
 
 		clearWeaponCargoGlobal _veh;
