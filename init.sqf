@@ -91,4 +91,5 @@ if (hasInterface || isServer) then
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
+	[] execVM "addons\Conlegium\VehicleInfo\init_VehInfo.sqf"; // Vehicle Information
 };
