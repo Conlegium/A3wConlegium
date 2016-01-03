@@ -46,7 +46,38 @@ R3F_LOG_CFG_objets_remorquables =
  */
 R3F_LOG_CFG_heliporteurs =
 [
-	"Helicopter_Base_F"
+	//"Helicopter_Base_F"
+	"C_Heli_Light_01_civil_F", 		//M-900 Civilian
+	"B_Heli_Light_01_F",			//MH-9 Hummingbird
+	"O_Heli_Light_02_unarmed_F",	//PO-30 Orca
+	"I_Heli_light_03_unarmed_F",	//WY-55 Hellcat (Green) unarmed
+	"B_Heli_Light_01_armed_F",		//AH-9 Pawnee
+	"O_Heli_Light_02_v2_F",			//PO-30 Orca (Armed, Black)
+	"O_Heli_Light_02_F",			//PO-30 Orca (Armed, Hex)
+	"I_Heli_light_03_F",			//WY-55 Hellcat (Armed)
+	"B_Heli_Attack_01_F",			//AH-99 Blackfoot
+	"O_Heli_Attack_02_F",			//Mi-48 Kajman (Hex)
+	"O_Heli_Attack_02_black_F"		//Mi-48 Kajman (Black)
+];
+
+/**
+ * List of class names of air vehicles which can lift ALL HEAVY liftables objects.
+ */
+R3F_LOG_CFG_heliporteurs_heavy =
+[
+	"O_Heli_Transport_04_F",		//Mi-290 Taru (Crane) [DLC]
+	"O_Heli_Transport_04_box_F",	//Mi-290 Taru (Box) [DLC]
+	"O_Heli_Transport_04_fuel_F",	//Mi-290 Taru (Fuel) [DLC]
+	"O_Heli_Transport_04_bench_F",	//Mi-290 Taru (Bench) [DLC]
+	"O_Heli_Transport_04_covered_F",//Mi-290 Taru (Transport) [DLC]
+	"O_Heli_Transport_04_medevac_F",//Mi-290 Taru (Medical) [DLC]
+	"O_Heli_Transport_04_repair_F",	//Mi-290 Taru (Repair) [DLC]
+	"O_Heli_Transport_04_ammo_F",	//Mi-290 Taru (Ammo) [DLC]
+	"B_Heli_Transport_03_unarmed_F",//CH-67 Huron (Black) [DLC]
+	"B_Heli_Transport_03_F",		//CH-67 Huron (Armed) [DLC]
+	"I_Heli_Transport_02_F",		//CH-49 Mohawk
+	"B_Heli_Transport_01_F",		//UH-80 Ghost Hawk (Black)
+	"B_Heli_Transport_01_camo_F"	//UH-80 Ghost Hawk (Green)
 ];
 
 /**
@@ -67,6 +98,32 @@ R3F_LOG_CFG_objets_heliportables =
 	"Boat_Armed_01_base_F"
 ];
 
+/**
+ * List of class names of HEAVY liftables objects.
+ */ //************ Addition by [IOCI] Randleman ************
+R3F_LOG_CFG_objets_heliportables_heavy =
+[
+	"Hatchback_01_base_F",
+	"SUV_01_base_F",
+	"Offroad_01_base_F",
+	"Van_01_base_F",
+	"MRAP_01_base_F",
+	"MRAP_02_base_F",
+	"MRAP_03_base_F",
+	"UGV_01_base_F",
+	"SDV_01_base_F",
+	"B_Truck_01_box_F",
+	"Boat_Civil_01_base_F",
+	"Boat_Armed_01_base_F",
+	"Truck_01_base_F",
+	"Truck_02_base_F",
+	"Truck_03_base_F",
+	"Wheeled_APC_F",
+	"Tank_F",
+	"Truck_F",
+	"Helicopter_Base_F",
+	"Plane"
+];
 
 /****** LOAD IN VEHICLE / CHARGER DANS LE VEHICULE ******/
 
@@ -95,7 +152,7 @@ R3F_LOG_CFG_transporteurs =
 	["Boat_Armed_01_base_F", 20],
 	["Heli_Light_01_base_F", 10],
 	["Heli_Light_02_base_F", 20],
-	["I_Heli_light_03_base_F", 20],
+	["Heli_light_03_base_F", 20],
 	["Heli_Transport_01_base_F", 25],
 	["Heli_Transport_02_base_F", 30],
 	["Heli_Transport_03_base_F", 30],
@@ -107,8 +164,6 @@ R3F_LOG_CFG_transporteurs =
 
 R3F_LOG_CFG_objets_transportables =
 [
-	["Static_Designator_01_base_F", 2],
-	["Static_Designator_02_base_F", 2],
 	["StaticWeapon", 5],
 	["Box_NATO_AmmoVeh_F", 10],
 	["B_supplyCrate_F", 5],

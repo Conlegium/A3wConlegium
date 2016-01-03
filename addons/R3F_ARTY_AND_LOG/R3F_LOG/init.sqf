@@ -57,6 +57,7 @@ if !(isServer && isDedicated) then
 
 	R3F_LOG_FNCT_objet_init = compile preprocessFile "addons\R3F_ARTY_AND_LOG\R3F_LOG\objet_init.sqf";
 	R3F_LOG_FNCT_heliporteur_init = compile preprocessFile "addons\R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\heliporteur_init.sqf";
+	R3F_LOG_FNCT_heliporteur_heavy_init = compile preprocessFile "addons\R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\heliporteur_heavy_init.sqf";
 	R3F_LOG_FNCT_remorqueur_init = compile preprocessFile "addons\R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorqueur_init.sqf";
 	R3F_LOG_FNCT_transporteur_init = compile preprocessFile "addons\R3F_ARTY_AND_LOG\R3F_LOG\transporteur\transporteur_init.sqf";
 
@@ -73,6 +74,9 @@ if !(isServer && isDedicated) then
 
 	R3F_LOG_action_heliporter_valide = false;
 	R3F_LOG_action_heliport_larguer_valide = false;
+	// ************ Addition by [IOCI] Randleman ************
+	R3F_LOG_action_heliporter_heavy_valide = false;
+	R3F_LOG_action_heliport_heavy_larguer_valide = false;
 
 	R3F_LOG_action_deplacer_objet_valide = false;
 	R3F_LOG_action_selectionner_objet_remorque_valide = false;

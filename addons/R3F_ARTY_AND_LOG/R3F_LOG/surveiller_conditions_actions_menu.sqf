@@ -24,6 +24,8 @@ _resetConditions =
 	R3F_LOG_action_selectionner_objet_charge_valide = false;
 	R3F_LOG_action_heliporter_valide = false;
 	R3F_LOG_action_heliport_larguer_valide = false;
+	R3F_LOG_action_heliporter_heavy_valide = false;
+	R3F_LOG_action_heliport_heavy_larguer_valide = false;
 };
 
 while {true} do
@@ -225,6 +227,33 @@ while {true} do
 			{!(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled")} &&
 			{(getPosATL (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte") select 2) >= 0};
 	};
+	
+	
+	// ************ Addition by [IOCI] Randleman ************
+	if ({(vehicle player) isKindOf _x} count R3F_LOG_CFG_heliporteurs_heavy > 0) then
+	{
+		R3F_LOG_objet_addAction = vehicle player;
 
+		// On est dans le véhicule, on affiche pas les options de transporteur et remorqueur
+		call _resetConditions;
+
+		// Condition action heliporter HEAVY
+		R3F_LOG_action_heliporter_heavy_valide =
+			driver R3F_LOG_objet_addAction == player &&
+			{{_x != R3F_LOG_objet_addAction && {!(_x getVariable "R3F_LOG_disabled")}} count nearestObjects [R3F_LOG_objet_addAction, R3F_LOG_CFG_objets_heliportables_heavy, 15] > 0} &&
+			{isNull (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte")} &&
+			{vectorMagnitude velocity R3F_LOG_objet_addAction < 6} &&
+			{(getPos R3F_LOG_objet_addAction) select 2 > 1} &&
+			{!(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled")};
+
+		// Condition action heliport_larguer HEAVY
+		R3F_LOG_action_heliport_heavy_larguer_valide =
+			driver R3F_LOG_objet_addAction == player &&
+			{!isNull (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte")} &&
+			//{vectorMagnitude velocity R3F_LOG_objet_addAction < 15} &&
+			//{(getPos R3F_LOG_objet_addAction) select 2 < 40} &&
+			{!(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled")} &&
+			{(getPosATL (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte") select 2) >= 0};
+	};
 	sleep 0.3;
 };
