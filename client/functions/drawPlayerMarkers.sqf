@@ -73,6 +73,40 @@ A3W_mapDraw_thread = [] spawn
 				_deadATMs spawn { A3W_atmArray = A3W_atmArray - _this };
 			};
 		};
+		
+	//*Addition*by*Randleman*****************************************************************************************IOCI****
+	
+	//General Store Icon
+	_GenStoreIcon = (call currMissionDir) + "client\icons\store_general.paa";
+	_GenStoreIconSize = {(1 / ctrlMapScale (_this select 0)) max 30 min 150};
+	{
+		if (!isPlayer _x && {(vehicleVarName _x) select [0,8] == "GenStore"}) then
+		{	
+			_newArrayIcons pushBack [_GenStoreIcon, [1,1,1,1], getPosATL _x, _GenStoreIconSize, _GenStoreIconSize, 0];
+		};
+	} forEach entities "CAManBase";
+		
+	//Gun Store Icon
+	
+	_GunStoreIcon = (call currMissionDir) + "client\icons\store_gun.paa";
+	_GunStoreIconSize = {(1 / ctrlMapScale (_this select 0)) max 30 min 150};
+	{
+		if (!isPlayer _x && {(vehicleVarName _x) select [0,8] == "GunStore"}) then
+		{	
+			_newArrayIcons pushBack [_GunStoreIcon, [1,1,1,1], getPosATL _x, _GunStoreIconSize, _GunStoreIconSize, 0];
+		};
+	} forEach entities "CAManBase";
+	
+	//Vehicle Store Icon
+	_VehicleStoreIcon = (call currMissionDir) + "client\icons\store_vehicle.paa";
+	_VehicleStoreIconSize = {(1 / ctrlMapScale (_this select 0)) max 30 min 150};
+	{
+		if (!isPlayer _x && {(vehicleVarName _x) select [0,8] == "VehStore"}) then
+		{	
+			_newArrayIcons pushBack [_VehicleStoreIcon, [1,1,1,1], getPosATL _x, _VehicleStoreIconSize, _VehicleStoreIconSize, 0];
+		};
+	} forEach entities "CAManBase";
+//***************************************************************************************************************************
 
 		if (_showPlayers) then
 		{

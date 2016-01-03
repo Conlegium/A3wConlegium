@@ -126,8 +126,8 @@ if (["A3W_survivalSystem"] call isConfigOn) then
 [] spawn
 {
 	[] execVM "client\functions\createGunStoreMarkers.sqf";
-	[] execVM "client\functions\createGeneralStoreMarkers.sqf";
-	[] execVM "client\functions\createVehicleStoreMarkers.sqf";
+	//[] execVM "client\functions\createGeneralStoreMarkers.sqf";
+	//[] execVM "client\functions\createVehicleStoreMarkers.sqf";
 };
 
 [] spawn playerSpawn;
