@@ -106,6 +106,17 @@ A3W_mapDraw_thread = [] spawn
 			_newArrayIcons pushBack [_VehicleStoreIcon, [1,1,1,1], getPosATL _x, _VehicleStoreIconSize, _VehicleStoreIconSize, 0];
 		};
 	} forEach entities "CAManBase";
+	
+	//ChopShop Icon
+	_ChopShopIcon = (call currMissionDir) + "client\icons\chopshop_marker.paa";
+	_ChopShopIconSize = {(1 / ctrlMapScale (_this select 0)) max 30 min 150};
+	{
+		if (!isPlayer _x && {(vehicleVarName _x) select [0,8] == "ChopShop"}) then
+		{	
+			_newArrayIcons pushBack [_ChopShopIcon, [1,1,1,1], getPosATL _x, _ChopShopIconSize, _ChopShopIconSize, 0];
+		};
+	} forEach entities "CAManBase";
+	
 //***************************************************************************************************************************
 
 		if (_showPlayers) then
