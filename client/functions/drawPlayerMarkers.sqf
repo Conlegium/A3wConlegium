@@ -117,6 +117,16 @@ A3W_mapDraw_thread = [] spawn
 		};
 	} forEach entities "CAManBase";
 	
+	//Ownership Office Icon
+	_OwnOfficeIcon = (call currMissionDir) + "client\icons\OwnOffice_marker.paa";
+	_OwnOfficeIconSize = {(1 / ctrlMapScale (_this select 0)) max 30 min 150};
+		{
+			if (["OwnOffice_", _x] call fn_startsWith) then
+			{	
+				_newArrayIcons pushBack [_OwnOfficeIcon, [1,1,1,1], markerPos _x, _OwnOfficeIconSize, _OwnOfficeIconSize, 0];
+			};
+		} forEach allMapMarkers;
+	
 //***************************************************************************************************************************
 
 		if (_showPlayers) then

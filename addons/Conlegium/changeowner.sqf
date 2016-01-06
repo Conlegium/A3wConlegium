@@ -11,7 +11,7 @@ _driver = driver _vehicle;
 _eng = isengineon _vehicle;
 _vehicle setVelocity [0,0,0];
 
-titleText ["Welcome to Altis Ownership Licence Office!", "PLAIN DOWN", 0.5];
+titleText ["Welcome to Altis Ownership Office!", "PLAIN DOWN", 0.5];
 sleep 3;
 // Check if mutex lock is active.
 if (mutexScriptInProgress) exitWith
@@ -30,11 +30,11 @@ if (_vehicle getVariable ['ownerUID',''] == getPlayerUID player) exitWith {
 };
 
 if (_eng) then {
-	titleText ["Can't write Ownership while Engine is Running! Turn OFF within 10 seconds to retry...", "PLAIN DOWN", 0.5];
-	sleep 10;
+	titleText ["Can't write Ownership while Engine is Running! Turn OFF within 5 seconds to retry...", "PLAIN DOWN", 0.5];
+	sleep 5;
 	_eng = isengineon _vehicle;
 	if (_eng) exitWith {
-	titleText ["Engine still running. Writing Ownership-Licence CANCELED!", "PLAIN DOWN", 0.5];
+	titleText ["Engine still running. Writing Ownership CANCELED!", "PLAIN DOWN", 0.5];
 	sleep 2;
 	titleText ["Bye, maybe next time!", "PLAIN DOWN", 0.5];
 	mutexScriptInProgress = false;
@@ -69,10 +69,10 @@ if (_eng) exitWith {
 	if (!isNil "_price") then 
 	{
 		// Add total sell value to confirm message
-		_confirmMsg = format ["Ownership Licence for<br/>%1<br/>will costs you $%2 ...", _type, _price];
+		_confirmMsg = format ["Ownership for<br/>%1<br/>will costs you $%2 ...", _type, _price];
 
 		// Display confirm message
-		if ([parseText _confirmMsg, "Altis - Ownership-Licence Office", "OK, BUY IT!", true] call BIS_fnc_guiMessage) then
+		if ([parseText _confirmMsg, "Altis - Ownership Office", "OK, BUY IT!", true] call BIS_fnc_guiMessage) then
 		{	
 			// Ensure the player has enough money
 			if (_price > _playerMoney) exitWith

@@ -70,11 +70,6 @@ if (!isDedicated) then
 	};
 };
 
-// Conlegium Additions
-//********************************************************************************************************
-if (isServer) then {call compile preprocessFile "mapConfig\custom_additions\init.sqf";};
-//********************************************************************************************************
-
 if (isServer) then
 {
 	diag_log format ["############################# %1 #############################", missionName];
