@@ -5,6 +5,7 @@
 //	@file Author: AgentRev
 
 #define MISSION_PROC_TYPE_NAME "Side"
+#define MISSION_PROC_TYPE_NAME_2 "Objective"
 #define MISSION_PROC_TIMEOUT (["A3W_sideMissionTimeout", 60*60] call getPublicVar)
 #define MISSION_PROC_COLOR_DEFINE sideMissionColor
 

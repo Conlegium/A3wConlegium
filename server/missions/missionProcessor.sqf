@@ -12,7 +12,7 @@ if (!isServer) exitwith {};
 private ["_controllerSuffix", "_missionTimeout", "_availableLocations", "_missionLocation", "_leader", "_marker", "_failed", "_complete", "_startTime", "_oldAiCount", "_leaderTemp", "_newAiCount", "_adjustTime", "_lastPos", "_floorHeight"];
 
 // Variables that can be defined in the mission script :
-private ["_missionType", "_locationsArray", "_aiGroup", "_missionPos", "_missionPicture", "_missionHintText", "_successHintMessage", "_failedHintMessage"];
+private ["_missionType", "_locationsArray", "_aiGroup", "_missionPos", "_missionPicture", "_missionHintText", "_successHintTitle", "_successHintMessage", "_failedHintTitle", "_failedHintMessage"];
 
 _controllerSuffix = param [0, "", [""]];
 _aiGroup = grpNull;
@@ -47,7 +47,7 @@ _aiGroup setVariable ["A3W_missionMarkerName", _marker, true];
 if (isNil "_missionPicture") then { _missionPicture = "" };
 
 [
-	format ["%1 Objective", MISSION_PROC_TYPE_NAME],
+	format ["%1 %2", MISSION_PROC_TYPE_NAME, MISSION_PROC_TYPE_NAME_2],
 	_missionType,
 	_missionPicture,
 	_missionHintText,
@@ -131,9 +131,11 @@ if (_failed) then
 			};
 		} forEach _vehicles;
 	};
-
+	
+	if (isNil "_failedHintTitle") then { _failedHintTitle = "Objective Failed" };
+	
 	[
-		"Objective Failed",
+		_failedHintTitle,
 		_missionType,
 		_missionPicture,
 		if (!isNil "_failedHintMessage") then { _failedHintMessage } else { "Better luck next time!" },
@@ -186,9 +188,11 @@ else
 			};
 		} forEach _vehicles;
 	};
-
+	
+	if (isNil "_successHintTitle") then { _successHintTitle = "Objective Complete" };
+	
 	[
-		"Objective Complete",
+		_successHintTitle,
 		_missionType,
 		_missionPicture,
 		_successHintMessage,
