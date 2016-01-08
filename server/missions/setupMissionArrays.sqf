@@ -2,7 +2,7 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Name: setupMissionArrays.sqf
-//	@file Author: AgentRev
+//	@file Author: AgentRev, [IOCI] Randleman
 
 if (!isServer) exitWith {};
 
@@ -38,6 +38,11 @@ MoneyMissions =
 	["mission_SunkenTreasure", 1]
 ];
 
+ExchangeMissions =
+[
+	["mission_RewardExchange", 1]
+];
+
 MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
 SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
 MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTreasure"]]]] call removeDisabledMissions;
@@ -45,6 +50,7 @@ MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTrea
 { _x set [2, false] } forEach MainMissions;
 { _x set [2, false] } forEach SideMissions;
 { _x set [2, false] } forEach MoneyMissions;
+{ _x set [2, false] } forEach ExchangeMissions;
 
 MissionSpawnMarkers = [];
 SunkenMissionMarkers = [];

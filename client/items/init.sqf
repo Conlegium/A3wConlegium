@@ -3,7 +3,7 @@
 // ******************************************************************************************
 //@file Version: 1.0
 //@file Name: init.sqf
-//@file Author: MercyfulFate
+//@file Author: MercyfulFate, [IOCI] Randleman
 //@file Created: 21/7/2013 16:00
 //@file Description: Initialize Wasteland Items
 //@file Argument: the path to the directory holding this file.
@@ -19,6 +19,8 @@
 [_this, "bankbook"] call mf_init;
 [_this, "extinguisher"] call mf_init;
 [_this, "animalcatching"] call mf_init;
+[_this, "missionreward"] call mf_init;
+[_this, "missionrewardexchange"] call mf_init;
 
 if (["A3W_atmEnabled"] call isConfigOn) then
 {
