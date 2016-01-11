@@ -177,7 +177,14 @@ _successExec =
 	_box3 = createVehicle ["Box_IND_WpsSpecial_F", _lastPos, [], 5, "None"];
 	_box3 setDir random 360;
 	[_box3, "mission_Main_A3snipers"] call fn_refillbox;
-
+	
+	//spawn MissionReward
+		_reward = createVehicle ["Land_File2_F", _lastPos, [], 5, "None"];
+		_reward setPos ([_lastPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setDir random 360;
+		_reward setVariable ["mf_item_id", "missionreward", true];
+		_reward setVariable ["owner", "world", true];
+		
 	_successHintMessage = "The patrol has been stopped, the ammo crates are yours to take. Find them near the wreck!";
 };
 

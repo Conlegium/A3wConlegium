@@ -150,6 +150,13 @@ _successExec =
 		_box2 = createVehicle ["Box_East_Wps_F", (getPosATL _veh) vectorAdd ([[_veh call fn_vehSafeDistance, 0, 0], random 360] call BIS_fnc_rotateVector2D), [], 5, "None"];
 		_box2 setDir random 360;
 		[_box2, "mission_USLaunchers"] call fn_refillbox;
+		
+		//spawn MissionReward
+		_reward = createVehicle ["Land_File2_F", (getPosATL _veh) vectorAdd ([[_veh call fn_vehSafeDistance, 0, 0], random 360] call BIS_fnc_rotateVector2D), [], 5, "None"];
+		_reward setDir random 360;
+		_reward setVariable ["mf_item_id", "missionreward", true];
+		_reward setVariable ["owner", "world", true];
+		
 	};
 
 	_successHintMessage = "The sky is clear again, the enemy patrol was taken out! Ammo crates have fallen near the wreck.";

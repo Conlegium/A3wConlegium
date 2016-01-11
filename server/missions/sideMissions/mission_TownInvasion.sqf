@@ -79,7 +79,14 @@ _successExec =
 {
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
-
+	
+	//spawn MissionReward
+		_reward = createVehicle ["Land_File2_F", _missionPos, [], 5, "None"];
+		_reward setPos ([_missionPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setDir random 360;
+		_reward setVariable ["mf_item_id", "missionreward", true];
+		_reward setVariable ["owner", "world", true];
+		
 	_successHintMessage = format ["Nice work!<br/><br/><t color='%1'>%2</t><br/>is a safe place again!<br/>Their belongings are now yours to take!", sideMissionColor, _townName];
 	{ deleteVehicle _x } forEach [_tent1, _chair1, _chair2, _cFire1];
 };

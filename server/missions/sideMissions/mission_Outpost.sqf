@@ -46,7 +46,14 @@ _successExec =
 	// Mission complete
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach _objects;
 	[_locationsArray, _missionLocation, _objects] call setLocationObjects;
-
+	
+	//spawn MissionReward
+		_reward = createVehicle ["Land_File2_F", _missionLocation, [], 5, "None"];
+		_reward setPos ([_missionLocation, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setDir random 360;
+		_reward setVariable ["mf_item_id", "missionreward", true];
+		_reward setVariable ["owner", "world", true];
+		
 	_successHintMessage = "The outpost has been captured, good work.";
 };
 

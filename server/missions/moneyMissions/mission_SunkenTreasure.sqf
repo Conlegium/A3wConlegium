@@ -81,7 +81,14 @@ _successExec =
 		_x setVariable ["cmoney", 2500, true];
 		_x setVariable ["owner", "world", true];
 	} forEach _cashObjects;
-
+		
+		//spawn MissionReward
+		_reward = createVehicle ["Land_File2_F", _lastPos, [], 5, "None"];
+		_reward setPos ([_lastPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setDir random 360;
+		_reward setVariable ["mf_item_id", "missionreward", true];
+		_reward setVariable ["owner", "world", true];
+		
 	_successHintMessage = "The treasure has been captured, well done.";
 };
 

@@ -136,7 +136,14 @@ _successExec =
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _lastPos, [], 2, "None"];
 	_box2 setDir random 360;
 	[_box2, "mission_USLaunchers"] call fn_refillbox;
-
+	
+	//spawn MissionReward
+		_reward = createVehicle ["Land_File2_F", _lastPos, [], 5, "None"];
+		_reward setPos ([_lastPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setDir random 360;
+		_reward setVariable ["mf_item_id", "missionreward", true];
+		_reward setVariable ["owner", "world", true];
+		
 	_successHintMessage = "The convoy has been stopped, the weapon crates and vehicles are now yours to take.";
 };
 
