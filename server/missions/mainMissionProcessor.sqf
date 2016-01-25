@@ -4,8 +4,8 @@
 //	@file Name: mainMissionProcessor.sqf
 //	@file Author: AgentRev
 
-#define MISSION_PROC_TYPE_NAME "Main"
-#define MISSION_PROC_TYPE_NAME_2 "Objective"
+#define MISSION_PROC_TYPE_NAME "Discovered"
+#define MISSION_PROC_TYPE_NAME_2 "incident"
 #define MISSION_PROC_TIMEOUT (["A3W_mainMissionTimeout", 60*60] call getPublicVar)
 #define MISSION_PROC_COLOR_DEFINE mainMissionColor
 

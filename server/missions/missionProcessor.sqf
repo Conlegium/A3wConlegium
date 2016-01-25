@@ -132,7 +132,7 @@ if (_failed) then
 		} forEach _vehicles;
 	};
 	
-	if (isNil "_failedHintTitle") then { _failedHintTitle = "Objective Failed" };
+	if (isNil "_failedHintTitle") then { _failedHintTitle = "Incident expired" };
 	
 	[
 		_failedHintTitle,
@@ -189,7 +189,7 @@ else
 		} forEach _vehicles;
 	};
 	
-	if (isNil "_successHintTitle") then { _successHintTitle = "Objective Complete" };
+	if (isNil "_successHintTitle") then { _successHintTitle = "Incident cleared" };
 	
 	[
 		_successHintTitle,

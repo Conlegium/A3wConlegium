@@ -48,7 +48,7 @@ while {true} do
 
 	diag_log format ["WASTELAND SERVER - %1 Mission%2 waiting to run: %3", MISSION_CTRL_TYPE_NAME, _controllerSuffix, _nextMission];
 
-	[
+	/*[
 		parseText format
 		[
 			"<t color='%1' shadow='2' size='1.75'>%2 Objective%3</t><br/>" +
@@ -60,7 +60,7 @@ while {true} do
 			subTextColor,
 			_missionDelay / 60
 		]
-	] call hintBroadcast;
+	] call hintBroadcast;*/
 
 	uiSleep _missionDelay;
 
