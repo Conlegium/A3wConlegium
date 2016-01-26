@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "mainMissionDefines.sqf";
 
-private ["_vehicle", "_vehicleName", "_vehDeterminer"];
+private ["_vehicle", "_vehicleName", "_vehDeterminer", "_reward"];
 
 // setupVars must be defined in the top mission file
 
@@ -194,7 +194,7 @@ _successExec =
 	
 	//spawn MissionReward
 		_reward = createVehicle ["Land_File2_F", _lastPos, [], 5, "None"];
-		_reward setPos ([_lastPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setPos ([_lastPos, [[0.5 + random 1,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
 		_reward setDir random 360;
 		_reward setVariable ["mf_item_id", "missionreward", true];
 		_reward setVariable ["owner", "world", true];

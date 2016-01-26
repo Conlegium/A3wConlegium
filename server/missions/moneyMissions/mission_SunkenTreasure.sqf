@@ -10,7 +10,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_cashObjects", "_cash", "_cashPos", "_box1", "_boxPos", "_vehicleClass", "_vehicle"];
+private ["_cashObjects", "_cash", "_cashPos", "_box1", "_boxPos", "_vehicleClass", "_vehicle", "_reward"];
 
 _setupVars =
 {
@@ -84,7 +84,7 @@ _successExec =
 		
 		//spawn MissionReward
 		_reward = createVehicle ["Land_File2_F", _lastPos, [], 5, "None"];
-		_reward setPos ([_lastPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward setPos ([_lastPos, [[0.5 + random 1,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
 		_reward setDir random 360;
 		_reward setVariable ["mf_item_id", "missionreward", true];
 		_reward setVariable ["owner", "world", true];
