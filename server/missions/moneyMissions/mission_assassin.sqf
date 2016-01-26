@@ -9,7 +9,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_moneyAmount", "_reward", "_moneyText", "_townName", "_missionPos", "_buildingRadius", "_putOnRoof", "_fillEvenly", "_dropPos"];
+private ["_moneyAmount", "_reward", "_moneyText", "_townName", "_missionPos", "_buildingRadius", "_putOnRoof", "_fillEvenly"];
 
 _setupVars =
 {
@@ -64,8 +64,6 @@ _setupObjects =
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";
 	
-	_dropPos = getPosATL _Assassin;
-		
 	_missionHintText = format ["<br/>Find the Assassin in<br/><t size='1.35' color='%1'>%2</t><br/><br/>He holds a<br/><t color='%1'>file wich is worth %3</t><br/>at the exchangedevice.", moneyMissionColor, _townName, _moneyText];
 };
 
@@ -84,15 +82,15 @@ _successExec =
 	// Mission completed
 	
 	//spawn MissionReward
-		_reward = createVehicle ["Land_File2_F", _dropPos, [], 5, "None"];
-		_reward setPos ([_dropPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_reward = createVehicle ["Land_File2_F", _lastPos, [], 5, "None"];
+		_reward setPos ([_lastPos, [[0.5 + random 1,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
 		_reward setDir random 360;
 		_reward setVariable ["mf_item_id", "missionreward", true];
 		
 	for "_i" from 1 to 12 do
 	{
-		_cash = createVehicle ["Land_Money_F", _dropPos, [], 5, "None"];
-		_cash setPos ([_dropPos, [[0.1 + random 0.5,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+		_cash = createVehicle ["Land_Money_F", _lastPos, [], 5, "None"];
+		_cash setPos ([_lastPos, [[0.5 + random 1,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
 		_cash setDir random 360;
 		_cash setVariable ["cmoney", _moneyAmount / 12, true];
 		_cash setVariable ["owner", "world", true];
