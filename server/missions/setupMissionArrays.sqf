@@ -38,7 +38,8 @@ MoneyMissions =
 [
 	["mission_MoneyShipment", 1],
 	["mission_SunkenTreasure", 0.1],
-	["mission_assassin", 2]
+	["mission_assassin", 1.5],
+	["mission_assassins", 1.5]
 ];
 
 ExchangeMissions =
