@@ -403,7 +403,36 @@ headArray = compileFinal str
 	["Racing Helmet (Fuel)", "H_RacingHelmet_1_F", 25, "hat"],
 	["Racing Helmet (Bluking)", "H_RacingHelmet_2_F", 25, "hat"],
 	["Racing Helmet (Redstone)", "H_RacingHelmet_3_F", 25, "hat"],
-	["Racing Helmet (Vrana)", "H_RacingHelmet_4_F", 25, "hat"]
+	["Racing Helmet (Vrana)", "H_RacingHelmet_4_F", 25, "hat"],
+	["Tactical Glasses", "G_Tactical_Clear", 10, "gogg"],
+	["Spectacle Glasses", "G_Spectacles", 10, "gogg"],
+	["Tinted Spectacles", "G_Spectacles_Tinted", 10, "gogg"],
+	["Combat Goggles", "G_Combat", 10, "gogg"],
+	["Low Profile Goggles", "G_Lowprofile", 10, "gogg"],
+	["Shades (Green)", "G_Shades_Green", 10, "gogg"],
+	["Shades (Red)", "G_Shades_Red", 10, "gogg"],
+	["Shades (Black)", "G_Shades_Black", 10, "gogg"],
+	["Shades (Blue) ", "G_Shades_Blue", 10, "gogg"],
+	["Square Spectacles", "G_Squares", 10, "gogg"],
+	["Square Shades", "G_Squares_Tinted", 10, "gogg"],
+	["Sport Shades (Vulcan) ", "G_Sport_Blackred", 10, "gogg"],
+	["Sport Shades (Poison", "G_Sport_Blackyellow", 10, "gogg"],
+	["Sport Shades (Yetti)", "G_Sport_Greenblack", 10, "gogg"],
+	["Sport Shades (Style)", "G_Sport_Checkered", 10, "gogg"],
+	["Sport Shades (Fire)", "G_Sport_Red", 10, "gogg"],
+	["Avator glasses", "G_Aviator", 10, "gogg"],
+	["Balaclava (black)", "G_Balaclava_blk", 10, "gogg"],
+	["Balaclava (Combat Goggles)", "G_Balaclava_combat", 10, "gogg"],
+	["Balaclava (Low Profile Googles)", "G_Balaclava_lowprofile", 10, "gogg"],
+	["Balaclava (Olive)", "G_Balaclava_oli", 10, "gogg"],
+	["Bandanna (Aviator)", "G_Bandanna_aviator", 10, "gogg"],
+	["Bandanna (Beast)", "G_Bandanna_beast", 10, "gogg"],
+	["Bandanna (Black)", "G_Bandanna_blk", 10, "gogg"],
+	["Bandanna (Khaki)", "G_Bandanna_khk", 10, "gogg"],
+	["Bandanna (Olive)", "G_Bandanna_oli", 10, "gogg"],
+	["Bandanna (Shades)", "G_Bandanna_shades", 10, "gogg"],
+	["Bandanna (Sport)", "G_Bandanna_sport", 10, "gogg"],
+	["Bandanna (Tan)", "G_Bandanna_tan", 10, "gogg"]
 ];
 
 uniformArray = compileFinal str
@@ -558,7 +587,9 @@ backpackArray = compileFinal str
 	["Carryall (Khaki)", "B_Carryall_khk", 500, "backpack"],
 	["Carryall (MTP)", "B_Carryall_mcamo", 500, "backpack"],
 	["Carryall (Olive)", "B_Carryall_oli", 500, "backpack"],
-	["Carryall (Urban)", "B_Carryall_oucamo", 500, "backpack"]
+	["Carryall (Urban)", "B_Carryall_oucamo", 500, "backpack"],
+	["Carryall (Hex)", "B_Carryall_ocamo", 500, "backpack"],
+	["Carryall (Coyote)", "B_Carryall_cbr", 500, "backpack"]
 ];
 
 genItemArray = compileFinal str
@@ -576,7 +607,9 @@ genItemArray = compileFinal str
 	["Medikit", "Medikit", 150, "item"],
 	["Toolkit", "ToolKit", 150, "item"],
 	["Mine Detector", "MineDetector", 100, "item"],
-	["NV Goggles", "NVGoggles", 100, "nvg"],
+	["NV Goggles (Black)", "NVGoggles_OPFOR", 100, "nvg"],
+	["NV Goggles (Brown)", "NVGoggles", 100, "nvg"],
+	["NV Goggles (Green)", "NVGoggles_INDEP", 100, "nvg"],
 	["Diving Goggles", "G_Diving", 100, "gogg"],
 	["Binoculars", "Binocular", 50, "binoc"],
 	["Rangefinder", "Rangefinder", 150, "binoc"],
