@@ -55,7 +55,7 @@ if (_uid call isAdmin) then
 				};
 				case 4: //Money
 				{
-					_money = 5000;
+					_money = 50000;
 					player setVariable ["cmoney", (player getVariable ["cmoney",0]) + _money, true];
 					if (!isNil "notifyAdminMenu") then { ["money", _money] call notifyAdminMenu };
 				};
@@ -72,6 +72,11 @@ if (_uid call isAdmin) then
 				case 7: // toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleGodMode.sqf";
+				};
+				case 8: //
+				{
+					closeDialog 0;
+					deleteVehicle cursorTarget;
 				};
 			};
 		};
