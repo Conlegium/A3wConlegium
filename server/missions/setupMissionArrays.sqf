@@ -17,7 +17,8 @@ MainMissions =
 	["mission_MBT", 1],
 	["mission_LightArmVeh", 1],
 	["mission_ArmedHeli", 1],
-	["mission_CivHeli", 1]
+	["mission_CivHeli", 1],
+	["mission_HostilePlaneFormation", 0.5]
 ];
 
 SideMissions =
@@ -39,7 +40,8 @@ MoneyMissions =
 	["mission_MoneyShipment", 1],
 	["mission_SunkenTreasure", 0.1],
 	["mission_assassin", 1.5],
-	["mission_assassins", 1.5]
+	["mission_assassins", 1.5],
+	["mission_HostilePlane", 0.5]
 ];
 
 ExchangeMissions =
